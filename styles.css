@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: oswald, serif;
+
+}
+
+.wrapper {
+    height: 100vh;
+    /* ocupar toda a altura da tela */
+    width: 100vw;
+    /* ocupar toda a largura da tela */
+}
+
+.container-left {
+    display: inline-block;
+    /* colocar os itens na mesma linha (lateral) */
+    width: 60%;
+    padding: 136px;
+    margin-top: 10%;
+}
+
+.container-right {
+    display: inline-block;
+    background-color: rgba(93, 93, 125, 0.16);
+    /* rgba permite alterar cor de fundo sem afetar a logo ( ultimo digito é opacity que clareia ou escurece o fundo ) */
+    ;
+    height: 100vh;
+    /* ocupar altura inteira*/
+    width: 40%;
+    /* ocupar a lateral direita inteira*/
+    position: absolute;
+    /*fixa na posição que eu quero e rola conforme a a pagina*/
+}
+
+img {
+    position: relative;
+    /* posicionar o item e ajustar as margens ex: top, left etc: */
+    top: 25%;
+    right: 130px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    color: #5D5D7D;
+    width: 368px;
+
+}
+
+p {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    color: #5D5D7D;
+    opacity: 0.6;
+    margin: 15px 0px;
+    /* atalho serve para por 15px encima e embaixo e o zero pras duas laterais */
+    width: 540px;
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    background-color: #5D5D7D;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);
+    cursor: pointer;
+
+}
+
+button:hover {
+    /* efeito ao passar o maouse encima do butão*/
+    opacity: 0.8;
+}
+
+button:active {
+    /* efeito ao clicar encima do botão */
+    opacity: 0.5;
+}
+
+a {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+    color: rgba(93, 93, 125, 1);
+    margin-right: 41px;
+    cursor: pointer;
+}
+
+a:nth-child(2) {
+    /* selecionar 1 item para mudar alguma coisa, dentro do () colocar o numero em lista ou lateal q queira mudar */
+    opacity: 0.4;
+}
+
+a:hover {
+    opacity: 0.4;
+}
+
+a:active {
+    opacity: 0.8;
+}
+
+header {
+    margin: 24px 0 0 57px;
+}
+
+@media screen and (max-width:900px) {
+
+    /* responsividade  adicionar o px onde a tela esteja quebrando */
+    .container-left {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .container-right {
+        display: block;
+        /* pra ficar na mesma coluna */
+        height: auto;
+        /* se adapta de acordo com tamanho de tela disponivel */
+        width: 100%;
+        position: static;
+        padding: 40px;
+    }
+
+    img {
+        position: static;
+        /* ignora as posições top,left ect; */
+        max-width: 90%;
+        /* maximo que a imagem pode crescer */
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto;
+        margin: 58px 50px 0 50px;
+        text-align: center;
+        /* alinhar o texto no centro */
+    }
+
+    p {
+        margin: 15px 40px;
+        width: auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    @media screen and (max-width:330px) {
+        .container-left {
+            height: 70px;
+        }
+
+    }
+
+}
